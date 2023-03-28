@@ -1,0 +1,10 @@
+site_name: My Blogs
+
+repo_name: My Blogs
+repo_url: https://github.com/pkuflyingpig/cs-self-learning/
+
+nav:
+  - 前言: "index.md"
+
+theme:
+  name: material
