@@ -7,6 +7,7 @@ theme:
   name: material
 
 nav:
+  - 前言: "index.md"
   - Doxygen注释语法: "Doxygen注释语法.md"
   - Sphinx项目部署到Github Pages: "Sphinx项目部署到Github Pages.md"
   - c_online_compile: "c_online_compile.md"

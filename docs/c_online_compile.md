@@ -1,4 +1,4 @@
-https://coliru.stacked-crooked.com/
+[coliru](https://coliru.stacked-crooked.com/)
 
 <iframe
 height=400 
