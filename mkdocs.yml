@@ -1,10 +1,13 @@
 site_name: My Blogs
 
-repo_name: My Blogs
-repo_url: https://github.com/pkuflyingpig/cs-self-learning/
-
-nav:
-  - 前言: "index.md"
+repo_name: Jstbob.github.io
+repo_url: https://github.com/Jstbob/Jstbob.github.io/
 
 theme:
   name: material
+
+nav:
+  - Doxygen注释语法: "Doxygen注释语法.md"
+  - Sphinx项目部署到Github Pages: "Sphinx项目部署到Github Pages.md"
+  - c_online_compile: "c_online_compile.md"
+  - 创建windows驱动开发环境: "创建windows驱动开发环境.md"
