@@ -12,4 +12,6 @@ nav:
   - Sphinx项目部署到Github Pages: "Sphinx项目部署到Github Pages.md"
   - c_online_compile: "c_online_compile.md"
   - 创建windows驱动开发环境: "创建windows驱动开发环境.md"
-  - 子目录例子: "sub folder/demo.md"
+  - 子目录例子:
+    - demo1: "sub folder/demo1.md"
+    - demo2: "sub folder/demo2.md"
