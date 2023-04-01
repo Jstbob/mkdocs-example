@@ -7,8 +7,9 @@ theme:
   name: material
 
 nav:
-  - 前言: "index.md"
+  - index: "index.md"
   - Doxygen注释语法: "Doxygen注释语法.md"
   - Sphinx项目部署到Github Pages: "Sphinx项目部署到Github Pages.md"
   - c_online_compile: "c_online_compile.md"
   - 创建windows驱动开发环境: "创建windows驱动开发环境.md"
+  - sub floder: "sub floder/demo.md"
