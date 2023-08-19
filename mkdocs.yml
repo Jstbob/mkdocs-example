@@ -15,3 +15,4 @@ nav:
   - 子目录例子:
     - demo1: "sub folder/demo1.md"
     - demo2: "sub folder/demo2.md"
+  - 做笔记思路: "readme.md"
