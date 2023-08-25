@@ -1,0 +1,828 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../Sphinx%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E5%88%B0Github%20Pages/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.3">
+    
+    
+      
+        <title>Doxygen注释语法 - My Blogs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.0e669242.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#doxygen" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="My Blogs" class="md-header__button md-logo" aria-label="My Blogs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Blogs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Doxygen注释语法
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Jstbob/Jstbob.github.io/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Jstbob.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="My Blogs" class="md-nav__button md-logo" aria-label="My Blogs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    My Blogs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Jstbob/Jstbob.github.io/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Jstbob.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Doxygen注释语法
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Doxygen注释语法
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    支持的注释
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    文件注释
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    类定义注释
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    常量/变量的注释
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    ▲函数注释
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    其它关键字
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    参考
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Sphinx%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E5%88%B0Github%20Pages/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sphinx项目部署到Github Pages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../c_online_compile/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    c_online_compile
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%88%9B%E5%BB%BAwindows%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    创建windows驱动开发环境
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    子目录例子
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            子目录例子
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sub%20folder/demo1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    demo1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sub%20folder/demo2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    demo2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../readme/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    做笔记思路
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    支持的注释
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    文件注释
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    类定义注释
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    常量/变量的注释
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    ▲函数注释
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    其它关键字
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    参考
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<blockquote>
+<p>Doxygen 是一个非常流行的源代码文档生成工具，能够从源代码的注释中生成说明文档，支持多种变成语言，如 C、Objective-C、C#、PHP、Java、Python、IDL（Corba、Microsoft 和 UNO/OpenOffice 风格）), Fortran, 某种程度上还有 D. Doxygen 也支持硬件描述语言 VHDL 。</p>
+<p>该文件内容主要简单的描叙 Doxygen 的注释语法，以备以后查阅。</p>
+</blockquote>
+<h1 id="doxygen">Doxygen 注释语法</h1>
+<h2 id="_1">支持的注释</h2>
+<p>Doxygen 只对源文件中的两种注释有所响应，需要生成文档的注释都要遵循这两种规则。</p>
+<ul>
+<li>单行注释：///<code>或者</code>//!</li>
+<li>多行注释：<code>/**</code>或者<code>/*!</code></li>
+</ul>
+<h2 id="_2">文件注释</h2>
+<p>对整个源文件的注释，一般放在整个文件的开头。</p>
+<pre><code class="language-c">/**
+ * @file 文件名
+ * @brief 简介
+ * @details 细节
+ * @mainpage 工程概览
+ * @author 作者
+ * @email 邮箱
+ * @version 版本号
+ * @date 年-月-日
+ * @license 版权
+ */
+</code></pre>
+<p>例如：</p>
+<pre><code class="language-c">/**
+ * @file Test.h
+ * @brief 测试头文件
+ * @details 这个是测试Doxygen
+ * @mainpage 工程概览
+ * @author jdzhangxin
+ * @email jdzhangxin@126.com
+ * @version 1.0.0
+ * @date 2017-11-17
+ */
+</code></pre>
+<p>生成的文档效果：</p>
+<p><img alt="img" src="https://upload-images.jianshu.io/upload_images/1730134-339e732f4b3fe3fd.png?imageMogr2/auto-orient/strip|imageView2/2/w/811/format/webp" /></p>
+<h2 id="_3">类定义注释</h2>
+<p>类定义的注释方式非常简单，使用<code>@brief</code>后面填写类的概述，换行填写类的详细信息。</p>
+<pre><code class="language-c"> /**
+ * @brief 类的简介
+ * @detail 类的详细概述
+ */
+</code></pre>
+<p>例如：</p>
+<pre><code class="language-c"> /**
+ * @brief 测试类
+ * 主要用来演示Doxygen类的注释方式
+ */
+ class Test{
+ };
+</code></pre>
+<p>文档效果：</p>
+<p><img alt="img" src="https://upload-images.jianshu.io/upload_images/1730134-509ca5cdaff70836.png?imageMogr2/auto-orient/strip|imageView2/2/w/796/format/webp" /></p>
+<blockquote>
+<p>命名空间、结构体、联合体、枚举定义与类定义注释方式一致。</p>
+</blockquote>
+<h2 id="_4">常量/变量的注释</h2>
+<p>常量/变量包括以下几种类型</p>
+<ul>
+<li>全局常量变量</li>
+<li>宏定义</li>
+<li>类/结构体/联合体的成员变量</li>
+<li>枚举类型的成员</li>
+</ul>
+<p>注释分为两种方式，代码前注释、代码后注释，可根据具体情况自行选择。</p>
+<ul>
+<li>代码前注释</li>
+</ul>
+<p><code>c
+  /// a rectangle length variable  
+  int length=100;</code></p>
+<p>例如：</p>
+<p><code>c
+  /// 缓存大小
+  #define BUFSIZ 1024*4</code></p>
+<ul>
+<li>代码后注释</li>
+</ul>
+<p><code>c
+  常量/变量 ///&lt; 注释</code></p>
+<p>例如：</p>
+<p><code>c
+  #define BUFSIZ 1024*4 ///&lt; 缓存大小</code></p>
+<p>生成文档效果：</p>
+<p><img alt="img" src="https://upload-images.jianshu.io/upload_images/1730134-722b8a69463f405a.png?imageMogr2/auto-orient/strip|imageView2/2/w/796/format/webp" /></p>
+<h2 id="_5">▲函数注释</h2>
+<p>一个完整的函数注释：</p>
+<pre><code class="language-c">/**
+ * @brief 函数简介
+ * @detail 详细说明
+ * 
+ * @param 形参 参数说明
+ * @param 形参 参数说明
+ * @return 返回说明
+ *   @retval 返回值说明
+ *   @retval 返回值说明
+ *
+ * @note 注解
+ * @attention 注意
+ * @warning 警告
+ * @exception 异常
+ */
+</code></pre>
+<p>例子：</p>
+<pre><code class="language-c">/**
+* @brief 主函数
+* @details 程序唯一入口
+*
+* @param argc 命令参数个数
+* @param argv 命令参数指针数组
+* @return 程序执行成功与否
+*     @retval 0 程序执行成功
+*     @retval 1 程序执行失败
+* @note 这里只是一个简单的例子
+*/
+int main(int argc, char* argv[])
+</code></pre>
+<p>文档效果：</p>
+<p><img alt="img" src="https://upload-images.jianshu.io/upload_images/1730134-ead3b48ba10f6f0d.png?imageMogr2/auto-orient/strip|imageView2/2/w/798/format/webp" /></p>
+<h2 id="_6">其它关键字</h2>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>生成字段名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>@see</code></td>
+<td>参考</td>
+<td></td>
+</tr>
+<tr>
+<td><code>@class</code></td>
+<td>引用类</td>
+<td>用于文档生成连接</td>
+</tr>
+<tr>
+<td><code>@var</code></td>
+<td>引用变量</td>
+<td>用于文档生成连接</td>
+</tr>
+<tr>
+<td><code>@enum</code></td>
+<td>引用枚举</td>
+<td>用于文档生成连接</td>
+</tr>
+<tr>
+<td><code>@code</code></td>
+<td>代码块开始</td>
+<td>与<code>@endcode</code>成对使用</td>
+</tr>
+<tr>
+<td><code>@endcode</code></td>
+<td>代码块结束</td>
+<td>与<code>@code</code>成对使用</td>
+</tr>
+<tr>
+<td><code>@bug</code></td>
+<td>缺陷</td>
+<td>链接到所有缺陷汇总的缺陷列表</td>
+</tr>
+<tr>
+<td><code>@todo</code></td>
+<td>TODO</td>
+<td>链接到所有TODO 汇总的TODO 列表</td>
+</tr>
+<tr>
+<td><code>@example</code></td>
+<td>使用例子说明</td>
+<td></td>
+</tr>
+<tr>
+<td><code>@remarks</code></td>
+<td>备注说明</td>
+<td></td>
+</tr>
+<tr>
+<td><code>@pre</code></td>
+<td>函数前置条件</td>
+<td></td>
+</tr>
+<tr>
+<td><code>@deprecated</code></td>
+<td>函数过时说明</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_7">参考</h2>
+<p>https://www.jianshu.com/p/9464eca6aefe</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.78eede0e.min.js"></script>
+      
+    
+  </body>
+</html>
